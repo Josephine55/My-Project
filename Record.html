@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Record System</title>
+    <link rel="stylesheet" href="Record.css">
+</head>
+
+<body>
+    <header>
+        <img class="school-logo" src="IMG-20240127-WA0003.jpg.jpeg" alt="School Logo">
+        <a class="href1" href="Home.html">Home</a>
+        <a class="href1" href="About.html">About</a>
+        <a class="href1" href="Login.html">Record</a>
+        <a class="href1" href="Services.html">Services</a>
+        <a class="href1" href="Login.html"><button class="Login-button">Login</button></a>
+    </header>
+
+    <div class="Intro-section">
+        <h1 class="Intro-heading">WELCOME IADC RECORDS HUB</h1>
+        <p class="Intro-paragraph">This record system helps manage and organize student 
+            records in a simple and efficient way. It allows easy storage, access, and 
+            updating of student information, including academic results and personal data. 
+            The goal is to make record keeping
+            aster, more accurate, and well organized for smooth school administration.
+        </p>
+    </div>
+
+<h1>Student Record System</h1>
+
+<!-- ================= FILE SECTION ================= -->
+<section class="card">
+    <h2>Upload Documents</h2>
+
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Preview</th>
+                <th>Download</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="fileTable"></tbody>
+    </table>
+
+    <!-- PREVIEW MODAL -->
+    <div id="previewBox" class="preview-box" style="display:none;">
+        <div class="preview-content">
+            <div class="preview-header">
+                <h4>File Preview</h4>
+                <button onclick="closePreview()">✖</button>
+            </div>
+            <div id="previewContent"></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ================= EXAM SECTION ================= -->
+<section class="card">
+    <h2>Student Exam Section</h2>
+
+    <!-- 🔥 STUDENT INFO -->
+    <div class="student-info">
+        <input type="text" id="studentName" placeholder="Student Name (Required)">
+        <input type="text" id="studentClass" placeholder="Class (e.g SS2)">
+    </div>
+
+    <!-- LEVEL -->
+    <select id="studentType" onchange="loadSubjects()">
+        <option value="">Select Level</option>
+        <option value="junior">Junior</option>
+        <option value="senior">Senior</option>
+    </select>
+
+    <!-- SUBJECTS -->
+    <div id="subjects"></div>
+
+    <button onclick="addCustomSubject()">+ Add Subject</button>
+    <button onclick="generateResult()">Generate Result</button>
+
+    <!-- RESULT TABLE -->
+    <h3>Result Sheet</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>CA (40)</th>
+                <th>Exam (60)</th>
+                <th>Total</th>
+                <th>Grade</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <tbody id="resultTable"></tbody>
+    </table>
+
+    <!--  RESULT SUMMARY -->
+    <div id="resultSummary" class="summary-box"></div>
+
+    <!--  ACTION BUTTONS -->
+    <div class="action-buttons">
+        <button onclick="saveResult()">Save Result</button>
+        <button onclick="downloadResult()">Download Result</button>
+    </div>
+
+</section>
+<footer>
+     <div class="footer-section1">
+       <div> 
+             <img class="footer-logo" src="IMG-20240127-WA0003.jpg.jpeg" alt="School Logo">
+             <p class="paragraph1">IADC IGAN_IPABI</p>
+        </div>
+        <div ><a class="href2" href="Record.html">Contact</a></div>
+        <div> <a class="href3" href="About.html">Connect</a> </div>
+        
+
+        <div class="text-div"> 
+            <div><p class="last1">Pioneering education</p></div>
+              <div><p class="last2">to serve and help shape</p></div>
+                <div><p class="last3">A better world</p></div>
+        </div>
+        <div>
+            <h2 class="last">Ijebu Angelican</h2>
+            <h3>Diocesan College</h3>
+            <h3>Igan-Ipabi</h3>
+            <p>Established 7th October, 1996</p>
+            <p>E-mail: iadc96@yahoo.com</p>
+        </div>
+      
+           <div id="social-images">
+            <img class="social" src="facebook.png" alt="">
+            <img class="social" src="twitter.png" alt="">
+            <img class="social" src="youtube.png" alt="">
+
+          </div>
+       
+     </div>
+
+     <div id="footer-section2">
+        <div><p class="paragraph3">Copyright 2026. IADC IGAN_IPABI, All Rights Reserved, </p></div>
+        <div id="social-images">
+          
+
+        </div>
+        <div><p class="paragraph3">Private Policy</p> <p class="paragraph4" >Terms and Conditions</p></div>
+
+
+     </div>
+     
+
+</footer>
+
+
+<script src="Record.js"></script>
+
+</body>
+</html>

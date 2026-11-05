@@ -1,0 +1,141 @@
+body{
+    padding-top: 150px;
+    background-color: white;
+    margin: 0;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 80px;
+    padding: 25px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 20px;
+    z-index: 1; 
+    background-color: #ffffff;  
+}
+.Login-button{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px;
+    border-radius: 5px;
+    background-color: rgb(255, 254, 254);
+    color: rgb(248, 18, 18);
+
+}
+.Login-button:hover{
+    background-color: #ffffff;
+    color:#2c3e50;
+    cursor: pointer;
+}
+.school-logo{
+    height: 55px;
+    width: 55px;
+    position:absolute;
+    left: 50px;
+}
+a{
+    
+    text-decoration: none;
+    font-size: 20px;
+    font-family:'Times New Roman';
+    
+    
+}
+a:hover{
+        color:#2c3e50;
+        cursor: pointer;
+    }
+
+
+
+#information-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.information{
+    background-color: rgb(10, 45, 73);
+    padding: 70px;
+    height: 300px;
+    width: 300px;
+    border-radius: 0px 10px 5px 10px;
+    box-shadow: 10px 10px 4px rgb(190, 189, 189);
+    display: grid;
+    position: relative;
+    padding-bottom: 100px;
+      
+}
+#name{
+    border-radius: 15px;
+    border: none;
+    height: 45px;
+    background-color: rgb(192, 190, 194)
+}
+#password{
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(192, 190, 194);
+    height: 45px;   
+
+}
+#password:focus{
+    outline: none;
+}
+#name:focus{
+    outline: none;
+}
+input[type="text"]{
+    font-size: 20px;
+    
+    
+}
+#textLabel{
+    color: white;
+    font-size: 22px;
+
+}
+#submitBtn{
+    position: absolute;
+    bottom: 30px;
+    left: 180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(248, 18, 18);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+
+    
+}
+#togglePassword{
+    position: absolute;
+    right: 90px;
+    top: 68%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+
+}
+
+footer {
+    text-align: center;
+    padding: 100px;
+    background: #1e3c72;
+    color: white;
+    margin-top: 100px;
+}
